@@ -4,15 +4,10 @@
 
 #ifndef LISTASDOBLEMNETEENLAZADAS_GESTION_H
 #define LISTASDOBLEMNETEENLAZADAS_GESTION_H
-//#include "LinkedDouble.h"
-#include "Sim.h"
-#include "Gestion.h"
-//#include "Node.h"
 
-#include "LinkedDouble.cpp"
-#include "Sim.cpp"
-#include "Gestion.cpp"
-//#include "Node.cpp"
+#include "Sim.h"
+#include "LinkedDouble.h"
+#include "Gestion.h"
 
 class Gestion{
 private:
@@ -39,10 +34,14 @@ public:
 
     bool addNodeBeforTo(string,Sim);
 
-    void addNodeSorted(Sim);
+    void addNodeSorted(Sim info){
+        linked->addNodeSorted(info);
+    }
 
     string viewList();
 
+
+    virtual ~Gestion();
 };
 
 

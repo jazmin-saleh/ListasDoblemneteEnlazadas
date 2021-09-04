@@ -4,6 +4,7 @@
 
 #include "Gestion.h"
 
+
 void Gestion::addNodeFirst(Sim info) {
     linked->addNodeFirst(info);
 }
@@ -11,11 +12,6 @@ void Gestion::addNodeFirst(Sim info) {
 void Gestion::addNodeLast(Sim info) {
     linked->addNodeLast(info);
 }
-
-void Gestion::addNodeSorted(Sim info) {
-    linked->addNodeSorted(info);
-}
-
 
 bool Gestion::contNode(std::string idFind) {
     Node<Sim>* found = linked->findNode(idFind);
@@ -41,7 +37,7 @@ bool Gestion::addNodeAfterTo( string id,Sim info) {
     if (encontrar == NULL){
         return false;
     }else{
-        //linked->addNodeAfterTo(encontrar,info);
+        linked->addNodeAfterTo(encontrar,info);
         return true;
     }
 }
@@ -64,6 +60,12 @@ bool Gestion::addNodeBeforTo(string id, Sim info) {
         return true;
     }
 }
+
+Gestion::~Gestion() {
+
+}
+
+
 
 
 
